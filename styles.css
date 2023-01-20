@@ -2,7 +2,6 @@ body{
     max-width: 1200px;
     background-color: #B0B595;
     margin: auto;
-    
 }
 
 #border {
@@ -14,11 +13,13 @@ h1 {
     font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 60px;
+    text-align: center;
 }
 
 header h2{
     font-family: 'Courier New', Courier, monospace;
     font-weight: 300px;
+    text-align: center;
 }
 
 h2 {
@@ -27,10 +28,22 @@ h2 {
     font-size: 25px;
 }
 
-section {
+footer {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    font-weight: 300px;
+}
+
+.box{
     display: flex;
-    flex-direction: column;
-    background-color:#DDCBBB;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box .box1, .box2, .box3 {
+    column-width: inherit;
+    background-color: #DDCBBB;
+    padding:5mm;
+    border-radius: 15px;
 }
 
 ul{
