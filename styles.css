@@ -47,6 +47,7 @@ h2 {
     font-size:14px;
     margin: 0px;
     padding: 0px;
+    color:#3B2A1B;
 }
 
 main{
@@ -61,6 +62,7 @@ section{
     padding:10px;
     background-color: #EFE7D3;
     border-radius: 15px;
+    box-shadow: 5px 5px 8px #bda78d;
 }
 
 ul{
@@ -132,6 +134,7 @@ footer a {
     h1 {
         text-align: left;
         font-size: 45px;
+        color:#3B2A1B;
     }
     header h2 {
         text-align: left;
