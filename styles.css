@@ -1,7 +1,7 @@
 body{
-    max-width: 1200px;
-    background-color: #B0B595;
-    margin: auto;
+    background-color: #9AA076;
+    margin: 20px;
+    position: relative;
 }
 
 #border {
@@ -12,47 +12,59 @@ body{
 h1 {
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 60px;
+    font-size:45px;
     text-align: center;
 }
 
 header h2{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 300px;
+    font-family: Courier Prime, sans-serif;
+    font-weight: lighter;
     text-align: center;
+    font-size: 15px;
 }
 
 h2 {
     font-family: Raleway, sans-serif;
     font-weight: 300px;
-    font-size: 25px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 0px;
 }
 
-footer {
-    font-family: 'Courier New', Courier, monospace, sans-serif;
-    font-weight: 300px;
+main{
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-.box{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.box .box1, .box2, .box3 {
-    column-width: inherit;
-    background-color: #DDCBBB;
-    padding:5mm;
+section{
+    margin: 10px;
+    padding:10px;
+    background-color: #EFE7D3;
     border-radius: 15px;
+}
+footer {
+    font-family:Courier Prime, sans-serif;
+    font-weight: 300px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color:rgb(47, 82, 47);
 }
 
 ul{
-    list-style-type: none;  
+    list-style-type: none; 
+    margin: 0px;
+    padding: 10px; 
 }
 
 ul li a {
     font-family: 'Courier New', Courier, monospace, sans-serif;
     font-weight: 300px;
+    font-size: 15px;
     text-decoration: none;
-
+    text-align: left;
 }
