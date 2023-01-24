@@ -9,11 +9,21 @@ body{
     height: 250px;
 }
 
+#plants {
+    margin:auto;
+    width: 50%;
+}
+#potions {
+    margin:auto;
+    width: 45%;
+}
+
 h1 {
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size:45px;
+    font-size:35px;
     text-align: center;
+    margin:5px;
 }
 
 header h2{
@@ -21,13 +31,14 @@ header h2{
     font-weight: lighter;
     text-align: center;
     font-size: 15px;
+    margin:5px;
 }
 
 h2 {
     font-family: Raleway, sans-serif;
     font-weight: 300px;
-    font-size: 20px;
-    margin: 10px;
+    font-size:16px;
+    margin: 0px;
     padding: 0px;
 }
 
@@ -39,20 +50,10 @@ main{
 }
 
 section{
-    margin: 10px;
+    margin: 5px;
     padding:10px;
     background-color: #EFE7D3;
     border-radius: 15px;
-}
-footer {
-    font-family:Courier Prime, sans-serif;
-    font-weight: 300px;
-    text-align: center;
-}
-
-footer a {
-    text-decoration: none;
-    color:rgb(47, 82, 47);
 }
 
 ul{
@@ -64,7 +65,24 @@ ul{
 ul li a {
     font-family: 'Courier New', Courier, monospace, sans-serif;
     font-weight: 300px;
-    font-size: 15px;
+    font-size: 12px;
     text-decoration: none;
     text-align: left;
+    transition: font size 500ms ease-in-out, color 500ms ease;
+}
+
+ul li a:hover{
+    font-size: 18px;
+    color:darkolivegreen;
+}
+
+footer {
+    font-family:Courier Prime, sans-serif;
+    font-weight: 300px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color:rgb(47, 82, 47);
 }
