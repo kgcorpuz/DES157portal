@@ -1,9 +1,14 @@
 body{
-    background-color: #9AA076;
-    margin: 20px;
+    background: linear-gradient(135deg, rgba(157,191,150,1) 23%, rgba(149,190,230,0.9846386119631901) 45%, rgba(49,24,124,1) 100%);
+    margin: auto;
+    background-size: 400% 400%;
+    width: 100%;
     position: relative;
+    animation: animate 10s ease-in-out infinite;
 }
-
+main{
+    max-width: 1200px;
+}
 #border {
     width: 1100px;
     height: 250px;
@@ -13,6 +18,7 @@ body{
     margin:auto;
     width: 50%;
 }
+
 #potions {
     margin:auto;
     width: 45%;
@@ -50,7 +56,7 @@ main{
 }
 
 section{
-    margin: 5px;
+    margin: 10px;
     padding:10px;
     background-color: #EFE7D3;
     border-radius: 15px;
@@ -78,11 +84,81 @@ ul li a:hover{
 
 footer {
     font-family:Courier Prime, sans-serif;
+    font-size: 12px;
     font-weight: 300px;
     text-align: center;
 }
 
 footer a {
     text-decoration: none;
-    color:rgb(47, 82, 47);
+    color:rgb(255, 255, 255);
+}
+
+#plants:hover {
+    animation: zoom 2s ease-in;
+ } 
+ 
+@keyframes zoom {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(.5);
+}
+75% {
+    transform: scale(1);
+}
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    main{
+        display: flex;
+        justify-content: center;
+        margin:15px;
+    }
+    h1 {
+        text-align: left;
+        font-size: 45px;
+    }
+    header h2 {
+        text-align: left;
+        font-size:18px;
+    }
+
+    header {
+        margin:10px;
+        display: flex;
+    }
+
+    #banner{
+        max-height: 250px;
+        padding:20px;
+        width: 50%;
+    }
+    h2 {
+        font-size: 20px;
+    }
+
+    ul li a {
+        font-size: 15px;
+    }  
+    #plants {
+        margin:10px;
+        width: 50%;
+    }
+    #potions{
+        width: 30%;
+    }
 }
