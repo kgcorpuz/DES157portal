@@ -29,6 +29,7 @@ h1 {
     font-weight: 700;
     font-size:35px;
     text-align: center;
+    padding-top: 5px;
     margin:5px;
 }
 
@@ -43,7 +44,7 @@ header h2{
 h2 {
     font-family: Raleway, sans-serif;
     font-weight: 300px;
-    font-size:16px;
+    font-size:14px;
     margin: 0px;
     padding: 0px;
 }
@@ -78,7 +79,7 @@ ul li a {
 }
 
 ul li a:hover{
-    font-size: 18px;
+    font-size: 15px;
     color:darkolivegreen;
 }
 
@@ -160,5 +161,45 @@ footer a {
     }
     #potions{
         width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    body{
+        max-width: 1200px;
+    }
+    main {
+        max-height: 750;
+        padding:20px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    header {
+        max-height: 250px;
+    }
+    ul li a {
+        font-size: 18px;
+    }  
+
+    ul li a:hover{
+        font-size: 22px;
+        color:darkolivegreen;
+    }
+
+    #plant {
+        max-width: 200px;
+    }
+
+    #potion {
+        max-width: 200px;
+     }
+    
+    footer {
+        font-size: 15px;
     }
 }
