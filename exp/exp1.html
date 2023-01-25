@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open the console to see the experiment run!</h2>
+    <script>
+    //this is for capetelizing the first letter of each string of fruits
+        var fruits =('mangoes peaches lychee');
+        var newfruits = ("");
+        brokenfruits = fruits.split(" ");
+
+        for (var i = 0; i < brokenfruits.length; i++) {
+            brokenfruits[i] = brokenfruits[i].charAt(0).toUpperCase() + brokenfruits[i].slice(1);
+            newfruits = brokenfruits.join(" ");
+            }
+        console.log(newfruits);
+    </script> 
+
+</body>
+</html>
