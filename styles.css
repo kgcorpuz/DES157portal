@@ -1,6 +1,7 @@
 body{
     background: linear-gradient(135deg, rgba(157,191,150,1) 23%, rgba(149,190,230,0.9846386119631901) 45%, rgba(49,24,124,1) 100%);
     margin: auto;
+    padding: 10px;
     background-size: 400% 400%;
     width: 100%;
     position: relative;
@@ -27,10 +28,11 @@ main{
 h1 {
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size:35px;
+    font-size:40px;
     text-align: center;
     padding-top: 5px;
     margin:5px;
+    color:#3B2A1B;
 }
 
 header h2{
