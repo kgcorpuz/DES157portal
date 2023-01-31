@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<style>
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 700;
+        font-size:65px;
+        text-align: center;
+        margin:20px;
+        color:white;
+    }
+
+    p{
+        font-family:'Courier New', Courier, monospace;
+        font-weight: 400;
+        font-size:20px;
+        text-align: center;
+        color:black;
+    }
+</style>
+<body>
+<main>
+    <h1>Experiment 2</h1>
+        <p> ✩ Tropical fruits are so good! ✩
+        </p>
+        <p> ♡\(˶ˆ꒳ˆ˵)/♡</p>
+
+    <script>
+        userFruit = prompt("Choose fruit from the basket of options to see if you match the fruit master: mango, peach, or lychee!", " ");
+
+        var fruits = ["mango","peach","lychee"];
+
+        function randomInt(min,max){
+            return Math.floor ((max-min+1) * Math.random()) + min;
+        }
+
+        function cpuFruit (){
+            return fruits[randomInt(0,fruits.length)]
+        }
+
+        function changeBg(color){
+            document.body.style.background = color;
+        }
+
+        
+        if (userFruit === cpuFruit){
+            changeBg("goldenrod");
+        } else if (userFruit == "mango") {
+            changeBg("gold");
+        } else if (userFruit == "peach"){
+            changeBg("lightsalmon");
+        } else if (userFruit == "lychee"){
+            changeBg("tomato");
+        } else {
+            changeBg("black");
+        }
+
+        /* the user is asked to pick a fruit and the background changes to the colo of fruit. If the answer matches the random cpu then the bg turns to gold instead of the fruit color options */
+
+    </script>
+</main>
+
+</body>
+</html>
