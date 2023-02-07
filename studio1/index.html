@@ -14,10 +14,37 @@
         <header>
         <h1>Honey Bear Cafe</h1>
         </header>
-        
-        <form>
 
+        <form>
+            <p>Fill out these words to learn how your order was made!</p>
+            <label for="adj1">adjective:</label>
+            <input type="text" id="adj1" required>
+
+            <label for="adj2">adjective:</label>
+            <input type="text" id="adj2" required>
+
+            <label for="noun1">noun:</label>
+            <input type="text" id="noun1" required>
+
+            <label for="verb">verb:</label>
+            <input type="text" id="verb" required>
+            <label for="noun2">noun:</label>
+            <input type="text" id="noun2" required>
+
+            <fieldset>
+                <legend>Choose a dessert</legend>
+                <label for="toast">Toast</label>
+                <input type="radio" name="toast" id="toast" value="toast">
+                <label for="cake"> Cake</label>
+                <input type="radio" name="cake" id="cake" value="cake">
+                <label for="roll"> Swiss Roll</label>
+                <input type="radio" name="roll" id="roll" value="roll" checked>
+            </fieldset>
+            <input type="submit" name="submit" id="send-lib" value="submit!">
         </form>
+        <div id='bear'>
+            <img src="images/bear-01.png" alt="barista bear">
+        </div>
     </main>
     
 </body>
