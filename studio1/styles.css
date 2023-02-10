@@ -1,14 +1,19 @@
 body{
-    background-image: url('images/bg1-03.png');
+    background-image: url('images/bg1.png');
     margin: 20px;
 }
 
 form{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 20px;
-    border-radius: 20px;
+    border-radius: none;
     background-color: rgb(245, 241, 220);
     padding: 20px;
+}
+
+fieldset{
+    border: none;
+    padding: 0px;
 }
 fieldset label, fieldset input{
     display: inline;
@@ -18,17 +23,33 @@ fieldset label{
     margin-bottom: 20px;
 }
 
-input, label {
-    display: block;
+form p{
+    color:#796757;
 }
 
+label{
+    color:#796757;
+}
+
+input, label {
+    display:block;
+}
+
+input[type=text] {
+    border-radius: 5px;
+    border-style:none;
+    color:blanchedalmond;
+    padding:5px;
+}
 input{
     margin-bottom: 1em;
 }
 
 h1 {
+    font-size: 45px;
     margin: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Righteous', cursive;
+    color: #796757;
 }
 
 #bear{
@@ -38,4 +59,27 @@ h1 {
 #send-lib{
     margin-top: 10px;
     color:olivedrab;
+}
+
+@media only screen and (min-width: 1000px){
+    body{
+        max-width: 1200px;
+    }
+    main {
+        display: flex;
+        max-height: 750px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    header {
+        max-height: 250px;
+    }
+
+    #bear{
+        width: 50%;
+    }
+
 }

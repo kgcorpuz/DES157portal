@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Righteous&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <title>Studio 1</title>
     <script src="script.js" defer></script>
+
 </head>
 <body>
-    <main>
-        <header>
+    <header>
         <h1>Honey Bear Cafe</h1>
-        </header>
+    </header>
 
+    <main>
         <form>
             <p>Fill out these words to learn how your order was made!</p>
             <label for="adj1">adjective:</label>
@@ -32,18 +36,17 @@
             <input type="text" id="noun2" required>
 
             <fieldset>
-                <legend>Choose a dessert</legend>
-                <label for="toast">Toast</label>
-                <input type="radio" name="toast" id="toast" value="toast">
-                <label for="cake"> Cake</label>
-                <input type="radio" name="cake" id="cake" value="cake">
-                <label for="roll"> Swiss Roll</label>
-                <input type="radio" name="roll" id="roll" value="roll" checked>
+                <label for="dessert">pick a dessert:</label>
+                <select id ="dessert" name="dessert">
+                    <option value="toast">toast</option>
+                    <option value="cake">cake</option>
+                    <option value="swiss-roll">swiss-role</option>
+                </select>
             </fieldset>
             <input type="submit" name="submit" id="send-lib" value="submit!">
         </form>
         <div id='bear'>
-            <img src="images/bear-01.png" alt="barista bear">
+            <img src="images/mrbear.svg" alt="barista bear">
         </div>
     </main>
     
