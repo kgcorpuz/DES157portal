@@ -19,7 +19,7 @@
     </header>
 
     <main>
-        <form>
+        <form id="myForm">
             <p>Fill out these words to learn how your order was made!</p>
             <label for="adj1">adjective:</label>
             <input type="text" id="adj1" required>
@@ -30,8 +30,9 @@
             <label for="noun1">noun:</label>
             <input type="text" id="noun1" required>
 
-            <label for="verb">verb:</label>
-            <input type="text" id="verb" required>
+            <label for="verb1">verb:</label>
+            <input type="text" id="verb1" required>
+
             <label for="noun2">noun:</label>
             <input type="text" id="noun2" required>
 
@@ -43,11 +44,20 @@
                     <option value="swiss-roll">swiss-role</option>
                 </select>
             </fieldset>
-            <input type="submit" name="submit" id="send-lib" value="submit!">
+            <input type="submit" name="submit" class="send-lib" value="submit!">
         </form>
+        <article id="madlib"></article>
         <div id='bear'>
             <img src="images/mrbear.svg" alt="barista bear">
         </div>
+
+        <section id="overlay" class="hidden">
+            <article>
+                <h2>Clarence's Adventure</h2>
+                <p id="madlib"></p>
+                <img src="images/desserts-11.svg" id ='dessert_img' alt="toast">
+            </article>
+        </section>
     </main>
     
 </body>

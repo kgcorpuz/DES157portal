@@ -1,14 +1,14 @@
 body{
     background-image: url('images/bg1.png');
-    margin: 20px;
+    margin: 40px;
 }
 
 form{
     font-family: 'Nunito', sans-serif;
-    margin: 20px;
-    border-radius: none;
+    border-radius: 10px;
+    margin-right: 10px;
     background-color: rgb(245, 241, 220);
-    padding: 20px;
+    padding: 25px;
 }
 
 fieldset{
@@ -38,7 +38,7 @@ input, label {
 input[type=text] {
     border-radius: 5px;
     border-style:none;
-    color:blanchedalmond;
+    color:rgb(60, 42, 15);
     padding:5px;
 }
 input{
@@ -52,18 +52,86 @@ h1 {
     color: #796757;
 }
 
+.send-lib {
+    background-color: #364438;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#dessert{
+    border-color:#796757;
+    color:#364438;
+}
 #bear{
     justify-content: center;
 }
 
-#send-lib{
-    margin-top: 10px;
-    color:olivedrab;
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+ }
+ 
+ .showing {
+    visibility: visible;
+    opacity: 1;
+ }
+
+ #overlay{
+    position: absolute;
+    background-image: url('images/bg2.png');
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 200vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+#overlay article{
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(245, 241, 220);
+    color: #364438;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 35%;
+    left:35%;
+    transform: translate(-35%,-35%);
+}
+
+#overlay article p{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+
+#overlay article h2{
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    margin: auto;
+    color: #796757;
+}
+
+#overlay img{
+    margin-left: 50px;
+    margin-right: auto;
+    width:70%;
+    height: 70%;
+
 }
 
 @media only screen and (min-width: 1000px){
     body{
         max-width: 1200px;
+        margin-left:50px;
     }
     main {
         display: flex;
@@ -80,6 +148,19 @@ h1 {
 
     #bear{
         width: 50%;
+    }
+
+    #overlay article {
+        max-width: 1000px;
+    }
+
+
+    #overlay img{
+        margin-left: 100px;
+        margin-right: auto;
+        max-width:75%;
+        max-height: 75%;
+    
     }
 
 }
