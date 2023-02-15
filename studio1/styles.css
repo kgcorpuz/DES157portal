@@ -1,6 +1,6 @@
 body{
     background-image: url('images/bg1.png');
-    margin: 40px;
+    margin: 20px;
 }
 
 form{
@@ -8,7 +8,7 @@ form{
     border-radius: 10px;
     margin-right: 10px;
     background-color: rgb(245, 241, 220);
-    padding: 25px;
+    padding: 15px;
 }
 
 fieldset{
@@ -44,12 +44,28 @@ input[type=text] {
 input{
     margin-bottom: 1em;
 }
+header{
+    display: flex;
+    flex-direction: row;
+}
+
 
 h1 {
-    font-size: 45px;
-    margin: 20px;
+    font-size: 60px;
+    padding-top:30px;
+    margin-top:0;
+    margin-bottom: 0;
     font-family: 'Righteous', cursive;
     color: #796757;
+    width: 60%;
+}
+
+#honey{
+    width:40%;
+	max-width: 100%;
+	height: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .send-lib {
@@ -68,8 +84,12 @@ h1 {
     border-color:#796757;
     color:#364438;
 }
-#bear{
-    justify-content: center;
+#bear img{
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 60px;
 }
 
 
@@ -95,8 +115,7 @@ h1 {
     transition-timing-function: ease;
 }
 
-#overlay article{
-    font-family: 'Nunito', sans-serif;
+#overlay section{
     background-color: rgb(245, 241, 220);
     color: #364438;
     border-radius: 10px;
@@ -108,30 +127,76 @@ h1 {
 }
 
 #overlay article p{
+    font-family: 'Nunito', sans-serif;
     font-size: 18px;
     line-height: 1.5em;
 }
 
 
-#overlay article h2{
+#overlay h2{
     font-family: 'Righteous', cursive;
     font-size: 50px;
-    margin: auto;
+    margin: 25px;
     color: #796757;
 }
 
-#overlay img{
-    margin-left: 50px;
-    margin-right: auto;
-    width:70%;
-    height: 70%;
-
+article#madlib{
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+    color:rgb(60, 42, 15);
 }
 
+#overlay img{
+    display: block;
+    margin: 60px;
+	max-width: 80%;
+	height: auto;
+    border-radius: 10px;
+}
+
+footer p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color:rgb(60, 42, 15);
+    text-align: center;
+}
+
+footer a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color:#364438;
+    text-align: center;
+    display:block;
+}
+
+#honey:hover {
+    animation: wiggle 2s ease infinite;
+  }
+ 
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0);
+    }
+    15% {
+      transform: rotate(-20deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    40%{
+      transform: rotate(0);
+    }
+  }
+ 
 @media only screen and (min-width: 1000px){
     body{
         max-width: 1200px;
-        margin-left:50px;
+        margin-left:120px;
     }
     main {
         display: flex;
@@ -139,15 +204,30 @@ h1 {
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 80px;
+        padding-top:70px;
     }
 
     header {
         max-height: 250px;
     }
 
+    #container{
+        display: grid;
+        grid-template-columns: 50% 50%	;
+    }
+
     #bear{
+        max-width: 110%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    #honey{
         width: 50%;
+        max-width: 230px;
+        height: auto;
+        margin-bottom: 20px;
     }
 
     #overlay article {
@@ -156,11 +236,36 @@ h1 {
 
 
     #overlay img{
-        margin-left: 100px;
-        margin-right: auto;
-        max-width:75%;
-        max-height: 75%;
+        margin: 20px;
+        margin-right:40px;
+        max-width:400px;
+        height: auto;
+        border-radius: 20px;
     
+    }
+
+    #overlay h2{
+        font-family: 'Righteous', cursive;
+        font-size: 80px;
+        margin-left: 100px;
+        color: #796757;
+    }
+
+    article#madlib{
+        width: 60%;
+        padding-left: 100px;
+        font-family: 'Nunito', sans-serif;
+        font-size: 20px;
+        line-height: 1.5em;
+        color:rgb(60, 42, 15);
+    }
+
+    footer p{
+        text-align: left;
+    }
+
+    footer a{
+        text-align: left;
     }
 
 }

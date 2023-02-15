@@ -16,49 +16,53 @@
 <body>
     <header>
         <h1>Honey Bear Cafe</h1>
+        <div id="honey"> <img src="images/honey.svg" alt="honey pot"></div>
     </header>
 
     <main>
         <form id="myForm">
             <p>Fill out these words to learn how your order was made!</p>
             <label for="adj1">adjective:</label>
-            <input type="text" id="adj1" required>
+            <input type="text" id="adj1">
 
             <label for="adj2">adjective:</label>
-            <input type="text" id="adj2" required>
+            <input type="text" id="adj2">
 
             <label for="noun1">noun:</label>
-            <input type="text" id="noun1" required>
+            <input type="text" id="noun1">
 
-            <label for="verb1">verb:</label>
-            <input type="text" id="verb1" required>
+            <label for="verb1">verb (-ed):</label>
+            <input type="text" id="verb1">
 
             <label for="noun2">noun:</label>
-            <input type="text" id="noun2" required>
+            <input type="text" id="noun2">
 
             <fieldset>
                 <label for="dessert">pick a dessert:</label>
                 <select id ="dessert" name="dessert">
                     <option value="toast">toast</option>
                     <option value="cake">cake</option>
-                    <option value="swiss-roll">swiss-role</option>
+                    <option value="swiss-roll">swiss-roll</option>
                 </select>
             </fieldset>
-            <input type="submit" name="submit" class="send-lib" value="submit!">
+            <input type="submit" name="submit" class="send-lib" value="submit">
         </form>
-        <article id="madlib"></article>
+
         <div id='bear'>
-            <img src="images/mrbear.svg" alt="barista bear">
+            <img src="images/mrbear.gif" alt="barista bear">
         </div>
 
-        <section id="overlay" class="hidden">
-            <article>
+        <section id="overlay" class="hidden">      
                 <h2>Clarence's Adventure</h2>
-                <p id="madlib"></p>
-                <img src="images/desserts-11.svg" id ='dessert_img' alt="toast">
-            </article>
+                <div id='container'>
+                    <article id="madlib"></article>
+                    <img src="images/toast.svg" id ='dessert_img' alt="toast">
+                </div>
         </section>
     </main>
-    
+    <footer>
+        <p>made with ♥ by Kathryn Corpuz</p>
+        <a href="https://open.spotify.com/album/6oXxmHlIYxA9Qh7AxPKWM1?si=TAG70PhdSuuEgf3fVwxKmA">cafe bossa nova</a>
+    </footer>
 </body>
 </html>
