@@ -1,0 +1,161 @@
+body{
+    margin: 20px;
+    background-color:rgb(120, 135, 106);
+}
+
+h1 {
+    font-size: 60px;
+    padding-bottom:5px;
+    margin-top:0;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    color: #e7d5c5;
+    width: 100%;
+}
+
+
+
+header p, footer p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color:rgb(60, 42, 15);
+    text-align: center;
+}
+
+footer a{
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color:#364438;
+    text-align: center;
+    display:block;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: showing;
+    opacity: 1;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200vw;
+    height: 200vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.overlay section{
+    background-color: rgb(245, 241, 220,0.8);
+    color: #364438;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.overlay img{
+    display: block;
+	max-width: 100%;
+	height: auto;
+    border-radius: 10px;
+}
+
+.overlay h2{
+    font-family: 'Nunito', sans-serif;
+}
+
+#container {
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+#container div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+#container img {
+    display: block;
+    position: absolute;
+    transition: all 3s ease;
+}
+
+#suman {
+    left: 40%;
+    top: 30%;
+}
+
+#buko {
+    right: 20%;
+    top: 15%;
+}
+
+#puto{
+    left: 15%;
+    top: 50%;
+}
+
+#turon {
+    top: 70%;
+    right: 20%;
+}
+
+#taho {
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.start {
+    width: 1000px;
+    left: 0;
+    top: 0;
+}
+
+.suman,
+.buko,
+.taho,
+.puto,
+.turon {
+    width: 3000px;
+}
+
+.suman {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.buko {
+    top: 0;
+    left: -1800px;
+}
+
+.puto {
+    bottom: -600px;
+    left: -200px;
+}
+
+.turon {
+    bottom: -500px;
+    left: -1800px;
+}
+
+.taho {
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -70%);
+}
