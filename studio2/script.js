@@ -28,14 +28,14 @@
            case 'suman': theImg.className = 'suman'; 
             document.getElementById('overlay').className="showing";
             document.querySelector('h2').innerHTML = "Suman";
-            document.querySelector('div p').innerHTML = "Suman is a sticky rice dessert. It is prepared by steaming the glutinous rice and coconut milk mixture in a banana leaf. It has a nice mild flavor. It's often eaten as a side dish! I remember making this with my grandma when I was little.";
+            document.querySelector('div p').innerHTML = "Suman is a sticky rice dessert. It is prepared by steaming the glutinous rice and coconut milk mixture in a banana leaf. It has a nice mild flavor. It's often eaten as a side dish! I remember making this with my grandma when I was little and drinking tea to accompany this treat.";
             document.getElementById('dessert_img').src=`images/${myImages[0]}`;
             break;
 
            case 'buko': theImg.className = 'buko';
            document.getElementById('overlay').className="showing";
            document.querySelector('h2').innerHTML = "Buko Pandan";
-           document.querySelector('div p').innerHTML = "Buko Pandan is a coconut based dessert. There are many different mix-ins of jello, coconut shreds and nata de coco. It's often colored green with padan leaf flavoring. I love this dessert so much I always make it for christmas celebrations.";
+           document.querySelector('div p').innerHTML = "Buko Pandan is a coconut based dessert. There are many different mix-ins of jello, coconut shreds and nata de coco. It's often colored green with padan leaf flavoring. I love this dessert so much, I always make it for christmas celebrations.";
            document.getElementById('dessert_img').src=`images/${myImages[1]}`;
            break;
 
