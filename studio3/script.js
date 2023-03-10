@@ -11,13 +11,20 @@
 	const startGame = document.getElementById('startgame');
 	const gameControl = document.getElementById('gamecontrol');
 	const game = document.getElementById('game');
-	const score = document.getElementById('score');
+	const score1 = document.getElementById('score1');
+	const score2 = document.getElementById('score2');
 	const actionArea = document.getElementById('actions');
+
+	//for audio button effects
+	const audio1 = new Audio("sounds/bubble1.mp3");
+	const audio2 = new Audio("sounds/button_roll.mp3");
+	const audio3 = new Audio("sounds/clap.mp3");
+	const audio4 = new Audio("sounds/bubble5.mp3");
 
 	const gameData = {
 		dice: ['images/1dice.png', 'images/2dice.png', 'images/3dice.png', 
 			   'images/4dice.png', 'images/5dice.png', 'images/6dice.png'],
-		players: ['player 1', 'player 2'],
+		players: ['Player 1', 'Player 2'],
 		score: [0, 0],
 		roll1: 0,
 		roll2: 0,
@@ -32,8 +39,12 @@
 		console.log(gameData.index);
 		setUpTurn();
 		 
-		gameControl.innerHTML = '<h2></h2>';
-		gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
+		gameControl.innerHTML = '<h2>Sleepy?</h2>';
+		gameControl.innerHTML += '<button id="quit">Quit Here?</button>';
+		
+		document.getElementById('score1').className="showing";
+		document.getElementById('score2').className="showing";
+		document.getElementById('actions').className="showing";
 
 		document
 			.getElementById('quit').addEventListener('click', function () {
@@ -47,9 +58,8 @@
 		game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
 		actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
 		document.getElementById('roll').addEventListener('click', function(){
-
 			throwDice();
-
+			audio4.play();
 		});
 	}
 
@@ -59,14 +69,14 @@
 		gameData.roll2 = Math.floor(Math.random() * 6) + 1;
 		gameData.roll3 = Math.floor(Math.random() * 6) + 1;
 		game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-		game.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}"> 
+		game.innerHTML += `<div id='dice'><img src="${gameData.dice[gameData.roll1-1]}"> 
 							<img src="${gameData.dice[gameData.roll2-1]}">
-							<img src="${gameData.dice[gameData.roll3-1]}">`;
+							<img src="${gameData.dice[gameData.roll3-1]}"></div>`;
 		gameData.rollSum = gameData.roll1 + gameData.roll2 + gameData.roll3;
 
 		// if three 1's are rolled...
 		if( gameData.rollSum === 3 ){ 
-			game.innerHTML += '<p>Oh snap! Snake eyes!</p>';
+			game.innerHTML += '<p>Oh snap! 3 peas in a pod!</p>';
 			gameData.score[gameData.index] = 0;
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 			showCurrentScore();
@@ -82,20 +92,26 @@
 			setTimeout(setUpTurn, 2000);
 		}
 
+
 		// if neither die is a 1...
 		else { 
 			gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
 			actionArea.innerHTML = '<button id="rollagain">Roll</button> or <button id="pass">Pass</button>';
 
 			document.getElementById('rollagain').addEventListener('click', function () {
-				//setUpTurn();
+				audio1.play();
 				throwDice();
 			});
 
+			
 			document.getElementById('pass').addEventListener('click', function () {
+				audio2.play();
 				gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 				setUpTurn();
+		
 			});
+
+			
 
 			checkWinningCondition();
 		}
@@ -104,19 +120,27 @@
 
 	function checkWinningCondition() {
 		if (gameData.score[gameData.index] > gameData.gameEnd) {
-			score.innerHTML = `<h2>${gameData.players[gameData.index]} 
-			wins with ${gameData.score[gameData.index]} points!</h2>`;
+			game.innerHTML = `<h2>${gameData.players[gameData.index]} 
+			wins with ${gameData.score[gameData.index]} points!</h2>
+			<img id="confetti" class="move" src="images/confetti.png">`;
 			actionArea.innerHTML = '';
+			score1.innerHTML = `<p><strong>--</strong></p>`;
+			score2.innerHTML = `<p><strong>--</strong></p>`;
+			audio3.play();
 			document.getElementById('quit').innerHTML = 'Start a New Game?';
 		} else {
 			// show current score...
-			showCurrentScore();
+			showP1_Score();
+			showP2_Score();
 		}
 	}
 
-	function showCurrentScore() {
-		score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}
-		${gameData.score[0]}</strong> and <strong>${gameData.players[1]} 
-		${gameData.score[1]}</strong></p>`;
+	function showP1_Score() {
+		score1.innerHTML = `<p><strong>${gameData.score[0]}</strong></p>`;
 	}
+
+	function showP2_Score() {
+		score2.innerHTML = `<p><strong>${gameData.score[1]}</strong></p>`;
+	}
+
 }());

@@ -13,11 +13,16 @@ body {
 }
 
 h1 {
-    margin:20px;
+    margin:10px;
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 45px;
     padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color:rgb(251, 249, 242);
 }
 
 p {
@@ -30,13 +35,13 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
-#moon {
+#moon,#star{
     width: 120%;
-    max-width:300px;
+    max-width:500px;
 }
-#star {
-    width: 120%;
-    max-width:300px;
+
+#confetti {
+    max-width:400px;
 }
 
 
@@ -67,23 +72,48 @@ div {
 }
 
 
-#gamecontrol, #score,#game,#actions{
+
+#gamecontrol, #score1,#score2,#game,#actions{
     background-color: rgba(174, 176, 200, 0.8);
 }
 
 button{
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     background-color: cornsilk;
+}
+#game p{
+    text-align: left;
+}
+
+#score1.showing p, #score2.showing p {
+    font-size: 40px;
+    margin: 0;
 }
 
 #gamecontrol {
-    width: 80%;
-    height: 180px;
+    width: 160px;
+    height: 140px;
 
 }
 #main-box {
     width: 100%;
     padding:20px;
+    margin: 0;
+}
+
+#dice{
+    display: flex;
+}
+
+/* this is for score and actions */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    display: block;
+    opacity: 1;
 }
 
