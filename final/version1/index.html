@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Version 1</title>
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Honey Bear Cafe</h1>
+        <div id="honey"> <img src="images/honey.svg" alt="honey pot"></div>
+    </header>
+
+    <main>
+        <div id='bear'>
+            <img src="images/mrbear.gif" alt="barista bear">
+        </div>
+        <form id="myForm">
+            <p>Fill out these words to learn how your order was made!</p>
+            <label for="adj1">adjective:</label>
+            <input type="text" id="adj1">
+
+            <label for="adj2">adjective:</label>
+            <input type="text" id="adj2">
+
+            <label for="noun1">noun:</label>
+            <input type="text" id="noun1">
+
+            <label for="verb1">verb (-ed):</label>
+            <input type="text" id="verb1">
+
+            <label for="noun2">noun:</label>
+            <input type="text" id="noun2">
+
+            <fieldset>
+                <label for="dessert">pick a dessert:</label>
+                <select id ="dessert" name="dessert">
+                    <option value="toast">toast</option>
+                    <option value="cake">cake</option>
+                    <option value="swiss-roll">swiss-roll</option>
+                </select>
+            </fieldset>
+            <input type="submit" name="submit" class="send-lib" value="submit">
+        </form>
+
+        <section id="overlay" class="hidden">      
+                <h2>Clarence's Adventure</h2>
+                <div id='container'>
+                    <div id='box'>
+                        <img src="images/clarance1.png" id ='comic' alt="intro">
+                        <article id="madlib1"></article>
+                        <img src="images/clarance2.png" id ='comic' alt="bushes">
+                        <article id="madlib2"></article>
+                     </div>
+
+                    <div id='box'>
+                        <img src="images/clarance3.png" id ='comic' alt="search">
+                        <article id="madlib3"></article>
+                        <img src="images/clarance4.png" id ='comic' alt="bowl">
+                        <article id="madlib4"></article>
+                    </div>
+
+                    <div id='box'>
+                        <img src="images/clarance5.png" id ='comic'' alt="kitchen">
+                        <article id="madlib5"></article>
+                        <img src="images/toast.png" id ='dessert_img' alt="toast">
+                        <article id="madlib6"></article>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <p>made with ♥ by Kathryn Corpuz</p>
+        <a href="https://open.spotify.com/album/6oXxmHlIYxA9Qh7AxPKWM1?si=TAG70PhdSuuEgf3fVwxKmA">cafe bossa nova</a>
+    </footer>
+</body>
+</html>
