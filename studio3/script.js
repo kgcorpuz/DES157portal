@@ -80,6 +80,7 @@
 			gameData.score[gameData.index] = 0;
 			gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 			showCurrentScore();
+			throwDice();
 			setTimeout(setUpTurn, 2000);
 		}
 

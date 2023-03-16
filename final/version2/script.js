@@ -2,6 +2,9 @@
 
     "use strict";
     console.log("JS is running");
+
+    alert( "Try to interact with the madlib and learn about Clarence the bear! Test out if the form works and functionality of the buttons. Thank you for your time :)" );
+
     const form = document.querySelector('#myForm');
     const madlib1 = document.getElementById ('madlib1');
     const madlib2 = document.getElementById ('madlib2');
@@ -9,6 +12,14 @@
     const madlib4 = document.getElementById ('madlib4');
     const madlib5 = document.getElementById ('madlib5');
     const madlib6= document.getElementById ('madlib6');
+
+    const libOptions = {
+      adj: ['silly','slay','lovely','twinkly'],
+      noun1: ['stars','scrunchies','mango juice'],
+      noun2:['tshirt','tote bag','sweatshirt'],
+      verb: ['farted','danced','twirled'],
+      };
+
    
 
     form.addEventListener('submit', function(event) {
@@ -52,8 +63,8 @@
         overlay.innerHTML += '<button id="reset">Reset!</button>';
         document.getElementById('reset').addEventListener('click', function () {
 				location.reload();
+            window.scrollTo(100, 0);
 			});
-    
     });
 
 } )();

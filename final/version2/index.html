@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Righteous&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    <title>Version 1</title>
+    <title>Version 2</title>
     <script src="script.js" defer></script>
 
 </head>
@@ -48,33 +48,48 @@
                     <option value="swiss-roll">swiss-roll</option>
                 </select>
             </fieldset>
+            <!-- <button class="fill">randomize!</button> -->
             <input type="submit" name="submit" class="send-lib" value="submit">
         </form>
 
         <section id="overlay" class="hidden">      
-                <h2>Clarence's Adventure</h2>
-                <div id='container'>
-                    <div class='box'>
+            <h2>Clarence's Adventure</h2>
+            <div id='container'>
+                <div class='box'>
+                    <div class='pannel'>
                         <img src="images/clarance1.png" class ='comic' alt="intro">
-                        <article id="madlib1"></article>
-                        <img src="images/clarance2.png" class ='comic' alt="bushes">
-                        <article id="madlib2"></article>
-                     </div>
-
-                    <div class='box'>
-                        <img src="images/clarance3.png" class ='comic' alt="search">
-                        <article id="madlib3"></article>
-                        <img src="images/clarance4.png" class ='comic' alt="bowl">
-                        <article id="madlib4"></article>
+                        <article id="madlib1"><h2></h2></article>
                     </div>
+                    <div class='pannel'>
+                        <img src="images/bush.gif" class ='comic' alt="bushes">
+                        <article id="madlib2"><h2></h2></article>
+                    </div>
+                 </div>
 
-                    <div class='box'>
-                        <img src="images/clarance5.png" class ='comic' alt="kitchen">
-                        <article id="madlib5"></article>
-                        <img src="images/toast.png" id ='dessert_img' alt="toast">
-                        <article id="madlib6"></article>
+                <div class='box'>
+                    <div class="pannel">
+                        <img src="images/magnify.gif" class ='comic' alt="search">
+                        <article id="madlib3"><h2></h2></article>
+                    </div>
+                    <div class="pannel">
+                    <img src="images/clarance4.png" class ='comic' alt="bowl">
+                    <article id="madlib4"><h2></h2></article>
                     </div>
                 </div>
+
+                <div class='box'>
+                    <div class='pannel'>
+                        <img src="images/kitchen.gif" class ='comic' alt="kitchen">
+                        <article id="madlib5"><h2></h2></article>
+                    </div>
+    
+                    <div class='pannel'>
+                        <img src="images/toast.png" id ='dessert_img' alt="toast">
+                        <article id="madlib6"><h2></h2></article>
+                    </div>
+                    
+                </div>
+            </div>
         </section>
     </main>
     <footer>
