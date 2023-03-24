@@ -1,14 +1,15 @@
 body{
-    background-image: url('images/bg1.png');
+    background-image: url('images/cafebg_y.png');
     margin: 20px;
 }
 
 form{
     font-family: 'Nunito', sans-serif;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-right: 10px;
-    background-color: rgb(245, 241, 220);
-    padding: 15px;
+    height: 500px;
+    background-color: rgb(243, 236, 204);
+    padding: 10px;
 }
 
 fieldset{
@@ -66,6 +67,7 @@ h1 {
 	height: auto;
     margin: 0;
     padding: 0;
+    animation: wiggle 3s infinite;
 }
 
 .send-lib, #reset {
@@ -83,10 +85,10 @@ h1 {
     font-size: 16px;
 }
 
-.fill{ 
+#random{ 
     border-color:#364438;
     border-style:solid;
-    background-color: rgb(245, 241, 220);
+    background-color: rgb(243, 236, 204);
     font-family: 'Nunito', sans-serif;
     border-radius: 5px;
     color: #364438;
@@ -98,10 +100,11 @@ h1 {
 }
 
 .send-lib{
-    margin-left: 270px;
+    margin-left: 125px;
 }
 #reset{
-   margin-left:600px;
+   margin-left:550px;
+   margin-top: 0;
 }
 
 #dessert{
@@ -110,9 +113,8 @@ h1 {
 }
 #bear img{
     display: block;
-    max-width:75%;
+    max-width:80%;
     height: auto;
-    margin-top: 20px;
 }
 
 
@@ -128,7 +130,7 @@ h1 {
 
  #overlay{
     position: absolute;
-    background-color: rgb(245, 241, 220); ;
+    background-color: rgb(243, 236, 204); ;
     top: 0;
     left: 0;
     width: 100vw;
@@ -149,9 +151,8 @@ h1 {
     transform: translate(-35%,-35%);
 }
 
+/*madlib comic stlying*/
 #container{
-    background-color: #FFFBF6;
-    padding-top: 50px;
     margin-left:100px;
     margin-right:100px;
 }
@@ -162,14 +163,12 @@ h1 {
     line-height: 1.5em;
 }
 
-
 #overlay h2{
     font-family: 'Righteous', cursive;
     font-size: 50px;
     margin: 25px;
     color: #796757;
 }
-
 article{
     padding: 20px;
     font-family: 'Nunito', sans-serif;
@@ -199,10 +198,25 @@ footer a{
     display:block;
 }
 
-#honey:hover {
-    animation: wiggle 2s ease infinite;
+/* Greyscale */
+#bw {
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+}
+
+#bw:hover {
+    filter: none;
+ }
+
+/*FOCUS*/
+#focus {
+    transition: all 1s ease;
   }
- 
+   
+  #focus:hover {
+    border-radius: 50%;
+  }
+
   @keyframes wiggle {
     0% {
       transform: rotate(0);
@@ -224,7 +238,7 @@ footer a{
 @media only screen and (min-width: 1000px){
     body{
         max-width: 1200px;
-        margin-left:120px;
+        margin-left:90px;
     }
     main {
         display: flex;
@@ -237,36 +251,39 @@ footer a{
     }
 
     header {
-        max-height: 200px;
+        max-height: 170px;
     }
-
+    /* this is for making all the boxes for comic*/
     #container{
        display: flex;
        flex-direction: column;
     }
+
     .box{
         display: flex;
+        margin-left: 50px;
     }
 
     .pannel{
         display: block;
-        width: 600px;
+        width: 445px;
+        height: 400px;
     }
 
     .comic, #dessert_img {
-        /* margin-left: 50px; */
         width:100%;
     }
 
     #bear{
-        max-width: 110%;
+        max-width: 100%;
         height: auto;
         margin-left: 0;
     }
 
-    #honey{
-        width: 50%;
-        max-width: 200px;    
+    #honey{ 
+        position: relative; 
+        top: -30px; 
+        width:230px;
     }
 
     #overlay article {
@@ -280,6 +297,7 @@ footer a{
         color: #796757;
     }
 
+    /* this is for the text boxes*/
     article#madlib1, article#madlib2,  article#madlib3,
     article#madlib4, article#madlib5,  article#madlib6{
         background-color: #3C2F24;
@@ -288,8 +306,6 @@ footer a{
         line-height: 1.5em;
         height: 80px;
         color:#FFFFFF;
-        /* width:410px; */
-        /* margin-left: 50px; */
         margin-top: 0;
         position: relative;
         top:-70px;
@@ -298,10 +314,7 @@ footer a{
 
     footer p{
         text-align: left;
-    }
-
-    footer a{
-        text-align: left;
+        margin-left: 90px;
     }
 
 }
